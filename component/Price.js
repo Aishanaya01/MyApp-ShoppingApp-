@@ -13,8 +13,7 @@ const  Price = (props, { data }) => {
               </Text> 
               <View style={{flexDirection:"row",marginLeft: 200 }} >
                 <Text style={{padding:4}}>Qty-</Text>
-                <Ionicons name="add-circle-outline" size={20} style={{padding:4 , }} />
-                <Ionicons name="remove-circle-outline" size={20} style={{padding:4}} />
+
               </View>
               
           </View>

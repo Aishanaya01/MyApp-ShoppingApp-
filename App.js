@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, SafeAreaView, Image , Text,TouchableOpacity, ImageBackground  } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Price from "./component/Price";
+import Count from "./component/Count";
 import Description from "./component/Description";
 import Cart from "./component/Cart";
 import Code from "./component/Code";
@@ -57,6 +58,7 @@ const App = () => {
       <Text style={{fontWeight: 'bold', fontSize:25 , margin:5  }}>{data.title}</Text>
       <Description data={data}/>
       <Price data={data}/>
+      <Count data={data}/>
       <View style={{flexDirection:"row"}}>
       <View >
             <Text>20% Off Today</Text>
