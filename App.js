@@ -1,64 +1,76 @@
 import React, { useState, useEffect } from "react";
-import { View, SafeAreaView, Image , Text,TouchableOpacity  } from "react-native";
+import { View, SafeAreaView, Image , Text,TouchableOpacity, ImageBackground  } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import FoodData from "./Apis/FoodData";
+import Price from "./component/Price";
+import Description from "./component/Description";
+import Cart from "./component/Cart";
+import Code from "./component/Code";
+import { FoodData as data } from  "./Apis/FoodData";
+
 const App = () => {
   return (
-    <View style={{ flex: 1, marginTop: 80 }}>
-      <View>
-        <View style={{ flexDirection: "row", alignItem: "flex-start" }}>
+    <View style={{ flex: 1, marginTop:50, padding:12, borderRadius:5 }}>
+       <View>
+        <View style={{ flexDirection: "row",   }}>
           <Ionicons name="arrow-back-outline" size={28} />
         </View>
-        <View style={{ flexDirection: "row", marginTop: 10, marginLeft: 250 }}>
+        <View style={{ flexDirection: "row", marginLeft: 250  , marginTop:-30  }}>
           <Ionicons name="search-outline" size={28} />
           <Ionicons name="cart-outline" size={28} />
         </View>
-      </View>
-      <View>
-        <Image
-          source={require("./Images/papaya.jpg")} style={{ marginLeft:32 , borderRadius:10 ,alignItems: "center",
-    justifyContent: "center", width:"80%", height:"60%"}}
-        />
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text>Code:145236</Text>
-        <View style={{ flexDirection: "row" }}>
-          <Ionicons name="star" size={15} />
-          <Ionicons name="star" size={15} />
-          <Ionicons name="star" size={15} />
-          <Ionicons name="star" size={15} />
-          <Ionicons name="star-outline" size={15} />
+      </View> 
+        <View>
+        
+         <ImageBackground source={data.image} style={{   width:"94%", height:"80%"}} imageStyle={{borderRadius:20 , marginLeft:20}}>
+         <View>
+        <Ionicons name="share-outline" size={28} style={{
+                        opacity: 0.7,
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderWidth: 1,
+                        borderColor: "transparent",
+                        borderRadius: 10,
+                        marginTop:40,
+                        marginLeft:280,
+                        marginBottom:10,
+            
+                      }}/>
         </View>
-      </View>
-      <Text style={{fontWeight: 'bold', fontSize:25}}>Papaya</Text>
-      <View>
-          <Text numberOfLines={2} ellipsizeMode='tail'>
-          Lorem Ipsum is simply dummy text of the printing and typese
-          tting industry. Lorem Ipsum has been the i
-          ndustry's standard dummy text ever since the 1500s,
-           when an unknown printer took a galley of type and scrambl
-           ed it to make a type specimen book. It has survived not only five
-            centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s wi
-            th the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-            like Aldus PageMaker including versions of Lorem Ipsum.
-          </Text>
-          <View>
-              <Text style={{fontSize:15, fontWeight:'bold'}}>
-                  $-10.5
-              </Text>
+        <View>
+        <Ionicons name="heart-outline" size={28} style={{
+                        opacity: 0.7,
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderWidth: 1,
+                        borderColor: "transparent",
+                        borderRadius: 10,
+                        marginLeft:280,
+                        marginBottom:-100,
+                      }} />
+        </View>
+         </ImageBackground>
+         
+      
+      </View>   
+      <Code/>
+    
+      <Text style={{fontWeight: 'bold', fontSize:25 , margin:5  }}>{data.title}</Text>
+      <Description data={data}/>
+      <Price data={data}/>
+      <View style={{flexDirection:"row"}}>
+      <View >
+            <Text>20% Off Today</Text>
           </View>
-          <View>
-              <TouchableOpacity style={{backgroundColor:'#fff', borderWidth: 3 , borderColor:"green"}}>
-                  <Text>Cart</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={{backgroundColor:'green'}}>
-                  <Text>Buy Now</Text>
-              </TouchableOpacity>
+          <View style={{ flexDirection: "row", marginLeft: 120 }}>
+          <Ionicons name="paper-plane-outline" size={18} />
+          <Text>Express Delivery</Text>
           </View>
       </View>
           
-        </View>
+     <Cart/>
+      </View>
+          
+    
       
   );
 };
