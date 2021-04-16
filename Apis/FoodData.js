@@ -1,7 +1,7 @@
 import Image1 from "../Images/papaya.jpg"; 
 
 
- export const FoodData=
+ export const FoodData= 
 {
     image:Image1,
     title: "Papaya",
