@@ -11,7 +11,7 @@ const  Price = (props, { data }) => {
                <Text style={{fontSize:15, fontWeight:'bold', }}>
               {props.data.price}
               </Text> 
-              <View style={{flexDirection:"row",marginLeft: 200 }} >
+              <View style={{flexDirection:"row",marginLeft: 170}} >
                 <Text style={{padding:4}}>Qty-</Text>
 
               </View>

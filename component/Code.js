@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 const  Code = (props, { data }) => {
    
   return (
-    <View style={{   flexDirection:"row", padding:6, marginTop:-180  }}>
+    <View style={{   flexDirection:"row", padding:6, marginTop:-165  }}>
     <Text>Code:145236</Text>
     <View style={{ flexDirection: "row" ,  marginLeft: 150 }}>
       <Ionicons name="star" size={15} />
