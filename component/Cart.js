@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 const Cart = () => {
     return (
-        <View  style={{flexDirection:"row" , marginBottom:130 , marginTop:45}}>
+        <View  style={{flexDirection:"row" , marginBottom:10 , marginTop:25}}>
 
         <TouchableOpacity style={{backgroundColor:'#fff', borderWidth: 2 ,height:40, borderColor:"green" , width:90 , alignItem:"center", margin:6}} >
         <View style={{marginTop:6, marginLeft:4}}>
