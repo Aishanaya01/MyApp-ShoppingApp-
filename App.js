@@ -77,59 +77,7 @@ const App = () => {
         </Swiper>
         
       </View>
-      {/* <View>
-         <ImageBackground source={data.image} style={{   width:"94%", height:"82%"}} imageStyle={{borderRadius:21 , marginLeft:20}}>
-         <View style={styles.container}>
-                <Swiper>
-                    <View style={[styles.slideContainer,styles.slide1]}>
-                        <Text style={{fontWeight:'bold'}}>slide1</Text>
-                    </View>
-                    <View style={[styles.slideContainer,styles.slide2]}>
-                    <View>
-                 <Image source={require('./Images/papaya2.jpg')}
-                  style={styles.backgroundImage}>
-                  </Image>
-                 </View>
-                        <Text style={{fontWeight:'bold'}}>Slide 2 .</Text>
-                    </View>
-                    <View style={[styles.slideContainer,styles.slide3,]}>
-                        <Text style={{fontWeight:'bold'}}>Slide 3 .</Text>
-                    </View>
-                </Swiper>
-            </View>
-         <View>
-        <Ionicons name="share-outline" size={28} style={{
-                        opacity: 0.7,
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderWidth: 1,
-                        borderColor: "transparent",
-                        borderRadius: 10,
-                        marginTop:100,
-                        marginLeft:280,
-                        marginBottom:10,
-                      }}/>
-        </View>
-        <View>
-        <Ionicons name="heart-outline" size={28} style={{
-                        opacity: 0.7,
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderWidth: 1,
-                        borderColor: "transparent",
-                        borderRadius: 10,
-                        marginLeft:280,
-                        marginBottom:600,
-                        marginTop:10,
-                      }} />
-        </View>
-         </ImageBackground>
-          <View style={styles.dotView}>
-        <Animated.View style={styles.dot} />
-        <Animated.View style={styles.dot} />
-        <Animated.View style={styles.dot} />
-      </View>    
-      </View>    */}
+      
       <Code />
       <Text style={{ fontWeight: 'bold', fontSize: 25, margin: 5 }}>
         {data.title}
@@ -153,19 +101,7 @@ const App = () => {
 };
 export default App;
 const styles = StyleSheet.create({
-  // dotView: {
-  //   marginBottom: 20,
-  //   marginTop: -100,
-  //   flexDirection: 'row',
-  //   justifyContent: 'center',
-  // },
-  // dot: {
-  //   height: 10,
-  //   width: 10,
-  //   backgroundColor: '#fff',
-  //   margin: 8,
-  //   borderRadius: 5,
-  // },
+ 
   container: {
     flex: 1,
    width:"94%",
